@@ -3,8 +3,6 @@ package com.example.demo.user;
 import com.example.demo.user.dto.UserLoginRequest;
 import com.example.demo.user.dto.UserRegisterRequest;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +12,7 @@ import javax.servlet.http.HttpSession;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/users")
-public class UserController {
+public class UserControllerV1 {
 
     private final UserService userService;
 

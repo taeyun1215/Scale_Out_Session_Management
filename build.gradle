@@ -29,6 +29,9 @@ dependencies {
 	// mariadb
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 
-    // ConfigurationProperties
-    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+    // Spring Boot Starter for Redis
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    // Spring Session Data Redis
+    implementation 'org.springframework.session:spring-session-data-redis'
 }
