@@ -1,11 +1,14 @@
 package com.example.demo.user;
 
+import com.example.demo.post.Post;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Entity
@@ -25,4 +28,13 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    @Builder.Default
+//    @BatchSize(size = 5)
+//    @Fetch(FetchMode.SUBSELECT)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Post> posts = new ArrayList<>();
+
+    public void addPost(Post post) {
+        posts.add(post);
+    }
 }
