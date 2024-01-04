@@ -36,11 +36,9 @@ dependencies {
 	// mariadb
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 
-    // Spring Boot Starter for Redis
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-
-    // Spring Session Data Redis
-    implementation 'org.springframework.session:spring-session-data-redis'
+    // Spring Boot Starter for Redis & Spring Session Data Redis
+//    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+//    implementation 'org.springframework.session:spring-session-data-redis'
 
     // querydsl
     implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"

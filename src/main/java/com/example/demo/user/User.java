@@ -1,6 +1,7 @@
 package com.example.demo.user;
 
 import com.example.demo.post.Post;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -29,6 +30,7 @@ public class User {
     private String password;
 
     @Builder.Default
+    @JsonManagedReference
 //    @BatchSize(size = 5)
 //    @Fetch(FetchMode.SUBSELECT)
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

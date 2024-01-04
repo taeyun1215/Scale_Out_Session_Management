@@ -27,6 +27,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Page<Post> getAllPosts(Pageable pageable) {
-        return postCustomRepo.getAllPosts(pageable);
+        Page<Post> posts = postCustomRepo.getAllPosts(pageable);
+        return posts;
     }
 }

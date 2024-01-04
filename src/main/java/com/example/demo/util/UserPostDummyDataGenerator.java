@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class UserPostDummyDataGenerator {
 
-    private static final String DB_URL = "jdbc:mariadb://172.17.0.2:3306/Scale_out_session_management";
+    private static final String DB_URL = "jdbc:mariadb://localhost:3306/Scale_out_session_management";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "6548";
 

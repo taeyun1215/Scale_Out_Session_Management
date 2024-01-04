@@ -36,6 +36,8 @@ public class PostCustomRepoImpl implements PostCustomRepo {
                 .leftJoin(post.user, user)
                 .fetchOne();
 
-        return new PageImpl<>(posts, pageable, count);
+        Page<Post> postPage = new PageImpl<>(posts, pageable, count);
+
+        return postPage;
     }
 }
