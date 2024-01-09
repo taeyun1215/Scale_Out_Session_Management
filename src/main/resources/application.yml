@@ -4,6 +4,12 @@ spring:
     url: jdbc:mariadb://3.39.226.13:3306/Scale_out_session_management
     username: root
     password: 6548
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 300000
+      max-lifetime: 1800000
+      connection-timeout: 30000
   jpa:
     hibernate:
       ddl-auto: update
