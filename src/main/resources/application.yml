@@ -1,7 +1,7 @@
 spring:
   datasource:
 #    url: jdbc:mariadb://localhost:3306/Scale_out_session_management
-    url: jdbc:mariadb://3.39.226.13:3306/Scale_out_session_management
+    url: jdbc:mariadb://52.79.163.50:3306/Scale_out_session_management
     username: root
     password: 6548
     hikari:
