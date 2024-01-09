@@ -10,5 +10,5 @@ ARG JAR_FILE=build/libs/*.jar
 
 COPY ${JAR_FILE} app.jar
 
-ENTRYPOINT ["java","-jar","/app.jar"]
-#ENTRYPOINT ["java", "-Dspring.config.location=/home/secret/application.yml","-jar","/app.jar"]
+#ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java", "-jar", "-javaagent:/home/pinpoint-agent-2.2.2/pinpoint-bootstrap-2.2.2.jar", "-Dpinpoint.agentId=adventcalendarDev", "-Dpinpoint.applicationName=adventcalendar", "-Dpinpoint.config=/home/pinpoint-agent-2.2.2/pinpoint-root.config", "-Duser.timezone=Asia/Seoul", "/app.jar"]
