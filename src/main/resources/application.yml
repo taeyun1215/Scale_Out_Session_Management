@@ -6,7 +6,7 @@ spring:
     password: 6548
     hikari:
       minimum-idle: 15
-      maximum-pool-size: 30
+      maximum-pool-size: 100
       idle-timeout: 300000
       max-lifetime: 1800000
       connection-timeout: 30000
