@@ -1,5 +1,6 @@
 package com.example.demo.post;
 
+import com.example.demo.post.dto.PageDTO;
 import com.example.demo.post.dto.PostRegisterRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -21,7 +22,7 @@ public class PostController {
     }
 
     @GetMapping
-    public Page<Post> getAllPosts(
+    public PageDTO<Post> getAllPosts(
             @PageableDefault(sort = "id", direction = Sort.Direction.DESC) Pageable pageable
     ) {
         return postService.getAllPosts(pageable);
