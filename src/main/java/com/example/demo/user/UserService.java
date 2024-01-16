@@ -9,4 +9,6 @@ public interface UserService {
 
     User loginUser(UserLoginRequest request);
 
+    User findById(Long userId);
+
 }
